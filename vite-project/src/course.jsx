@@ -1,10 +1,16 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import useFetch from "./Hooks/useFetch";
 
 function Courses() {
-  const [count, setCount] = useState(0);
-  const [name, setName] = useState("Aravinth");
-  const [gender, setGender] = useState("Male");
-  const [users, setUsers] = useState([]);
+  const {
+    count,
+    setCount,
+    name,
+    setName,
+    gender,
+    setGender,
+    users,
+  } = useFetch("https://jsonplaceholder.typicode.com/users");
 
   function handleClick() {
     setCount((prev) => {
@@ -22,12 +28,6 @@ function Courses() {
     });
   }
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((data) => setUsers(data));
-  }, []);
-
   return (
     <>
       <h1>Hi I'm {name}</h1>
@@ -37,7 +37,9 @@ function Courses() {
 
       <h2>Users List</h2>
       {users.map((user) => (
-        <p key={user.id}>{user.name},{user.email}</p>
+        <p key={user.id}>
+          {user.name}, {user.email}
+        </p>
       ))}
     </>
   );
