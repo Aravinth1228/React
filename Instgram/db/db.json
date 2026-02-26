@@ -1,0 +1,71 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "user": {
+        "id": 101,
+        "username": "john_doe",
+        "profile_pic": "src/assets/profile2.jpg"
+      },
+      "image": "src/assets/post1.jpg",
+      "caption": "Beautiful sunset 🌅 #Nature",
+      "likes": 120,
+      "comments": [
+        {
+          "user": "alice_wonder",
+          "comment": "Wow! Amazing shot! 📸"
+        },
+        {
+          "user": "mark_92",
+          "comment": "Where is this place?"
+        }
+      ],
+      "timestamp": "2026-02-26T08:30:00Z"
+    },
+
+    {
+      "id": 2,
+      "user": {
+        "id": 102,
+        "username": "aravinth_dev",
+        "profile_pic": "src/assets/profile2.jpg"
+      },
+      "image": "src/assets/post2.jpg",
+      "caption": "Coding mode ON 💻🔥 #developer",
+      "likes": 245,
+      "comments": [
+        {
+          "user": "tech_guru",
+          "comment": "Keep grinding bro 💪"
+        },
+        {
+          "user": "frontend_queen",
+          "comment": "React ah? 😎"
+        }
+      ],
+      "timestamp": "2026-02-26T09:15:00Z"
+    },
+
+    {
+      "id": 3,
+      "user": {
+        "id": 103,
+        "username": "travel_lover",
+        "profile_pic": "src/assets/profile3.jpg"
+      },
+      "image": "src/assets/post3.jpg",
+      "caption": "Mountain vibes 🏔️✨",
+      "likes": 89,
+      "comments": [
+        {
+          "user": "nature_clicks",
+          "comment": "This view 😍"
+        }
+      ],
+      "timestamp": "2026-02-25T18:00:00Z"
+    }
+  ]
+}
+
+
+// json-server  --watch db.json --port 3000
